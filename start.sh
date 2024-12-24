@@ -5,7 +5,6 @@ echo "Worker Initiated"
 echo "Symlinking files from Network Volume"
 rm -rf /workspace && \
   ln -s /runpod-volume /workspace
-
 echo "Starting ComfyUI API"
 source /workspace/venv/bin/activate
 TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
